@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:gravity="center">
+
+    <!-- Center the TextView above the buttons -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/wordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="WORD"
+        android:textStyle="bold"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/extraText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        android:text="..."
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/wordText" />
+
+    <LinearLayout
+        android:id="@+id/optionsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/wordText"
+        android:layout_marginTop="200dp">
+
+        <!-- Synonym Options -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/one"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/purple"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/lavender"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/two"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/purple"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/lavender"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/three"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/purple"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/lavender"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/four"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/purple"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/lavender"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        <TextView
+            android:id="@+id/feedbackTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:text=""
+            android:textColor="#FF0000"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+
+
+
+    <!-- Floating Action Button for file picker -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/filePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:layout_above="@+id/navbar"
+        android:src="@android:drawable/ic_menu_add"
+        app:backgroundTint="@color/lavender"
+        app:tint="@color/purple"
+        android:contentDescription="Select File" />
+
+
+    <!-- Circular Emoji Buttons as Navbar -->
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_navbar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp">
+
+        <!-- Circular Buttons for Emoji -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/root"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/purple"
+            app:strokeWidth="6px"
+            app:cornerRadius="20dp"
+            style="@style/Widget.MaterialComponents.Button"
+            android:text="🌳"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/synonym"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/purple"
+            app:strokeWidth="6px"
+            app:cornerRadius="20dp"
+            style="@style/Widget.MaterialComponents.Button"
+            android:text="🟰" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/antonym"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/purple"
+            app:strokeWidth="6px"
+            app:cornerRadius="20dp"
+            style="@style/Widget.MaterialComponents.Button"
+            android:text="❌"
+             />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/meaning"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/purple"
+            app:strokeWidth="6px"
+            app:cornerRadius="20dp"
+            style="@style/Widget.MaterialComponents.Button"
+            android:text="🤔"
+             />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/association"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/purple"
+            app:strokeWidth="6px"
+            app:cornerRadius="20dp"
+            style="@style/Widget.MaterialComponents.Button"
+            android:text="🤦"
+             />
+    </LinearLayout>
+
+
+</RelativeLayout>

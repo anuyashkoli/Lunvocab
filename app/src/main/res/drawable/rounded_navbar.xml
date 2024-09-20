@@ -1,0 +1,5 @@
+<!-- rounded_navbar.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/lavender" /> <!-- Set your navbar color -->
+    <corners android:radius="10dp" /> <!-- Adjust for how round you want it -->
+</shape>
